@@ -1,5 +1,5 @@
 {
-  "name": "nws-api",
+  "name": "nws-api-wrapper",
   "version": "1.0.0",
   "description": "API wrapper for the provided NWS API",
   "main": "index.js",
