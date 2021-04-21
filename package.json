@@ -1,0 +1,22 @@
+{
+  "name": "nws-api",
+  "version": "1.0.0",
+  "description": "API wrapper for the provided NWS API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GlitchicaL/nws-api.git"
+  },
+  "author": "Justin Acevero",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GlitchicaL/nws-api/issues"
+  },
+  "homepage": "https://github.com/GlitchicaL/nws-api#readme",
+  "dependencies": {
+    "axios": "^0.21.1"
+  }
+}
