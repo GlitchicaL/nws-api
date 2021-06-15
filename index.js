@@ -29,15 +29,30 @@ async function fetchData(url, retrieveForecast = false) {
 // Return the status of the server
 
 async function getStatus() {
-    let response = await fetchData(BASE_URL);
+    let data = await fetchData(BASE_URL);
 
-    let data = {
-        status: response.status,
-        statusText: response.statusText
+    let response = {
+        status: data.status,
+        statusText: data.statusText
     }
 
-    return data;
+    return response;
 }
+
+/***********************************************************/
+
+// Return information about user location (city, state, etc.)
+
+async function getLocationInfo(latitude, longitude) {
+    let url = await createURL(latitude, longitude);
+
+    let response = await fetchData(url);
+    if (typeof response == 'string') throw new Error(response);
+
+    let { data: { properties } } = response;
+    return properties;
+}
+
 
 /***********************************************************/
 
@@ -96,6 +111,7 @@ async function getHourlyForecast(latitude, longitude, periods = 156) {
 
 module.exports = {
     getStatus,
+    getLocationInfo,
     getForecast,
     getHourlyForecast
 }

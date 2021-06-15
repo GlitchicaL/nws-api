@@ -20,6 +20,15 @@ This function returns the status of the API using the base URL https://api.weath
 
 ---
 
+### getLocationInfo();
+`NWS.getLocationInfo(<latitude>, <longitude>);`
+
+#### Description & Notes:
+This function requires 2 parameters (latitude, and longitude), and will return an object of data about the coordinates such as grid coordinates, 
+forecast links, and even the relative city, and state.
+
+---
+
 ### getForecast();
 `NWS.getForecast(<latitude>, <longitude>, <periods>);`
 
